@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        //artificial sum of resources
         String[] res = getResources().getStringArray(R.array.contacts);
         contact_images.put(res[0], R.drawable.kor1);
         contact_images.put(res[1], R.drawable.kor2);
@@ -81,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
         final FloatingActionButton button = findViewById(R.id.play);
         if(!playing) {
             button.setImageDrawable(ContextCompat.getDrawable(this, R.drawable.ic_pause));
-            musicPlayer = MediaPlayer.create(this, sounds.get(current_contact));
+            musicPlayer = MediaPlayer.create(this, sounds.get(current_sound));
             //todo this shit
             musicPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
                 @Override
@@ -115,10 +115,11 @@ public class MainActivity extends AppCompatActivity {
                 text.setText(contactsArray[current_contact]);
                 ImageView im = findViewById(R.id.imageView);
                 im.setImageResource(contact_images.get(contactsArray[current_contact]));
-
+                return;
             }
             if(requestCode == Request.sound){
-
+                current_sound = data.getIntExtra(extra_info,0);
+                Log.i(TAG, "Activity Main, current_sound = " + current_sound);
             }
         }
     }

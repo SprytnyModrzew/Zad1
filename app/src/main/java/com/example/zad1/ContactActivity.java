@@ -24,7 +24,7 @@ public class ContactActivity extends Activity {
         int current_contact = received_intent.getIntExtra(MainActivity.extra_info,0);
         Log.i(TAG, "Selected contact: "+ current_contact);
         String[] contactsArray = getResources().getStringArray(R.array.contacts);
-        group = findViewById(R.id.contact_group);
+        group = findViewById(R.id.sound_group);
         selected_contact = current_contact;
         for(int i = 0; i < contactsArray.length; i++){
             final RadioButton button = new RadioButton(this);
@@ -57,7 +57,6 @@ public class ContactActivity extends Activity {
 
     public void onCancelButtonClicked(View view){
         Log.i(TAG, "Cancel selected");
-        Intent data = new Intent();
         setResult(RESULT_CANCELED);
         finish();
     }
