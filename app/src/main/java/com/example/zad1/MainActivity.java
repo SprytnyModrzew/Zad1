@@ -58,6 +58,11 @@ public class MainActivity extends AppCompatActivity {
             im.setImageResource(contact_images.get(res[rand]));
         }
         else text.setText("No contacts");
+        max = sounds.size();
+        if(max != 0){
+            int rand = (int) (max * Math.random());
+            current_sound = rand;
+        }
 
         Log.i(TAG, "Main Created "+Math.random());
     }
@@ -82,7 +87,6 @@ public class MainActivity extends AppCompatActivity {
         if(!playing) {
             button.setImageDrawable(ContextCompat.getDrawable(this, R.drawable.ic_pause));
             musicPlayer = MediaPlayer.create(this, sounds.get(current_sound));
-            //todo this shit
             musicPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
                 @Override
                 public void onCompletion(MediaPlayer mp) {

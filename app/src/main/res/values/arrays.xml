@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="contacts">
-        <item>Jacek Be</item>
-        <item>Aleksandra Wa</item>
-        <item>Eklerek Plejki</item>
-        <item>Majk Kałcz</item>
+        <item>Jonathan Joestar</item>
+        <item>Joseph Joestar</item>
+        <item>Jotaro Kujo</item>
+        <item>Jolyne Kujo</item>
     </string-array>
 
     <string-array name="sounds">
