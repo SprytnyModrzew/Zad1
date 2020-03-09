@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Zad1</string>
+    <string name="button_con">Change contact</string>
+    <string name="button_sound">Change sound</string>
+    <string name="button_cancel">Cancel</string>
+    <string name="button_ok">OK</string>
+</resources>

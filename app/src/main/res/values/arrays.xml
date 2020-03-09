@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="contacts">
+        <item>Jacek Be</item>
+        <item>Aleksandra Wa</item>
+        <item>Eklerek Plejki</item>
+        <item>Majk Kałcz</item>
+    </string-array>
+
+    <string-array name="sounds">
+        <item>Wryyyy</item>
+        <item>Rero</item>
+        <item>Golden Experience Requiem</item>
+        <item>Golden XP Requiem</item>
+    </string-array>
+
+</resources>
